@@ -451,7 +451,7 @@ public class HecateQuest {
             } else if(attack.charAt(0) == 'a') {
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'i') {
-                stun();
+                stunner = true;
             } else if(attack.charAt(0) == 'n') {
                 hp[1] = heavyAttack(hp[1]);
             } else if(attack.charAt(0) == 'h') {
@@ -524,10 +524,7 @@ public class HecateQuest {
         return opponentHp;
     }
 
-    //STUN
-    public static void stun() {
-        //NEED TO THINK SOMTHING FOR THIS
-    }
+   
 
 
 
@@ -558,7 +555,7 @@ public static int[] aresAttack(int[] hp) {
     // Battle Cry (70-90)
     else {
         System.out.println("Ares lets out a deafening Battle Cry, leaving you stunned!");
-        stun();
+        stunner = true;
     }
 
     return hp;
@@ -589,7 +586,7 @@ public static int[] artemisAttack(int[] hp) {
     // Evasion (70-90)
     else {
         System.out.println("Artemis gracefully evades your attack, leaving you stunned!");
-        stun();
+        stunner = true;
     }
 
     return hp;
@@ -620,7 +617,7 @@ public static int[] hadesAttack(int[] hp) {
     // Spectral Chain (70-90)
     else {
         System.out.println("Hades throws a spectral chain, preventing your next attack!");
-        stun();
+        stunner = true;
     }
 
     return hp;
@@ -651,7 +648,7 @@ public static int[] apolloAttack(int[] hp) {
     // Harmonic Resonance (70-90)
     else {
         System.out.println("Apollo's Harmonic Resonance leaves you stunned!");
-        stun();
+        stunner = true;
     }
 
     return hp;

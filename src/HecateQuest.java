@@ -516,169 +516,159 @@ public class HecateQuest {
 
     //attack of each god starts from here, everything thing is same for each god execpt for the attack type
 
-    //ares
-    public static int aresAttack(int playerHp,int opponentHp) {
+ // Ares
+public static int aresAttack(int playerHp, int opponentHp) {
 
-        int probability = rand.nextInt(100);
-        
-        //0-50
-        if (probability < 50) {
-            System.out.println("arrows of ares");
-            playerHp = lowAttack(playerHp);
-        }
-        //90-99
-        else if(probability < 99 && probability > 90) {
-            System.out.println("warrrior rage");
-            playerHp = heavyAttack(playerHp);
-        }
-        //50-70
-        else if(probability < 70 && probability > 50) {
-            System.out.println("tactical strike");
-            for(int x = 0; x < 3; x++) {
-                playerHp = lowAttack(playerHp);
-            }
-        }
-        //70-90
-        else {
-            System.out.println("battle cry");
-            stun();
-        }
+    int probability = rand.nextInt(100);
 
-        return playerHp;
+    // Low Attack (0-50)
+    if (probability < 50) {
+        System.out.println("Ares charges with a fury, dealing 10 damage!");
+        playerHp = lowAttack(playerHp, 10);
+    }
+    // Heavy Attack (90-99)
+    else if (probability < 99 && probability > 90) {
+        System.out.println("Ares enters a berserk rage, smashing for 45 damage!");
+        playerHp = heavyAttack(playerHp, 45);
+    }
+    // Tactical Strike (50-70)
+    else if (probability < 70 && probability > 50) {
+        System.out.println("Ares strikes swiftly, hitting you three times for 25 damage!");
+        for (int x = 0; x < 3; x++) {
+            playerHp = lowAttack(playerHp, 25);
+        }
+    }
+    // Battle Cry (70-90)
+    else {
+        System.out.println("Ares lets out a deafening Battle Cry, leaving you stunned!");
+        stun();
     }
 
+    return playerHp;
+}
 
-    //artemis 
-    public static int artemisAttack(int playerHp,int opponentHp) {
+// Artemis
+public static int artemisAttack(int playerHp, int opponentHp) {
 
-        int probability = rand.nextInt(100);
-        
-        //0-50
-        if (probability < 50) {
-            System.out.println("wildgrowth");
-            playerHp = medAttack(playerHp);
-        }
-        //90-99
-        else if(probability < 99 && probability > 90) {
-            System.out.println("moonlight brust");
-            boolean brustprob = rand.nextBoolean();
-            if(brustprob) {
-            playerHp = heavyAttack(playerHp);
-            }
-        }
-        //50-70
-        else if(probability < 70 && probability > 50) {
-            System.out.println("sylan Arrow");
-            for(int x = 0; x < 3; x++) {
-                playerHp = lowAttack(playerHp);
-            }
-        }
-        //70-90
-        else {
-            System.out.println("evasion");
-            stun();
-        }
+    int probability = rand.nextInt(100);
 
-        return playerHp;
+    // Medium Attack (0-50)
+    if (probability < 50) {
+        System.out.println("Artemis summons rapid Wild Growth, causing 25 damage!");
+        playerHp = medAttack(playerHp, 25);
     }
-    
-
-    //hades
-    public static int hadesAttack(int playerHp,int opponentHp) {
-
-        int probability = rand.nextInt(100);
-        
-        //0-50
-        if (probability < 50) {
-            System.out.println("summon the undead");
-            playerHp = medAttack(playerHp);
+    // Heavy Attack (90-99)
+    else if (probability < 99 && probability > 90) {
+        System.out.println("Artemis harnesses Moonlight energy, dealing 45 damage!");
+        playerHp = heavyAttack(playerHp, 45);
+    }
+    // Sylvan Arrows (50-70)
+    else if (probability < 70 && probability > 50) {
+        System.out.println("Artemis fires a barrage of Sylvan Arrows, each dealing 10 damage!");
+        for (int x = 0; x < 3; x++) {
+            playerHp = lowAttack(playerHp, 10);
         }
-        //90-99
-        else if(probability < 99 && probability > 90) {
-            System.out.println("necrotic blast");
-            playerHp = heavyAttack(playerHp);
-        }
-        //50-70
-        else if(probability < 70 && probability > 50) {
-            System.out.println("crued ground");
-            for(int x = 0; x < 3; x++) {
-                playerHp = lowAttack(playerHp);
-            }
-        }
-        //70-90
-        else {
-            System.out.println("spectral chain");
-            stun();
-        }
-
-        return playerHp;
+    }
+    // Evasion (70-90)
+    else {
+        System.out.println("Artemis gracefully evades your attack, leaving you stunned!");
+        stun();
     }
 
+    return playerHp;
+}
 
-    //apollo
-    public static int apolloAttack(int playerHp,int opponentHp) {
+// Hades
+public static int hadesAttack(int playerHp, int opponentHp) {
 
-        int probability = rand.nextInt(100);
-        
-        //0-50
-        if (probability < 50) {
-            System.out.println("solar flare");
-            playerHp = medAttack(playerHp);
-        }
-        //90-99
-        else if(probability < 99 && probability > 90) {
-            System.out.println("musical symphony");
-            playerHp = heavyAttack(playerHp);
-        }
-        //50-70
-        else if(probability < 70 && probability > 50) {
-            System.out.println("Eclipse Cascade");
-            for(int x = 0; x < 3; x++) {
-                playerHp = lowAttack(playerHp);
-            }
-        }
-        //70-90
-        else {
-            System.out.println("Harmonic Resonance");
-            stun();
-        }
+    int probability = rand.nextInt(100);
 
-        return playerHp;
+    // Medium Attack (0-50)
+    if (probability < 50) {
+        System.out.println("Hades summons the undead, causing 25 damage!");
+        playerHp = medAttack(playerHp, 25);
+    }
+    // Heavy Attack (90-99)
+    else if (probability < 99 && probability > 90) {
+        System.out.println("Hades releases a powerful Necrotic Blast, dealing 45 damage!");
+        playerHp = heavyAttack(playerHp, 45);
+    }
+    // Cursed Ground (50-70)
+    else if (probability < 70 && probability > 50) {
+        System.out.println("Hades makes the ground unbearable, causing 10 damage!");
+        for (int x = 0; x < 3; x++) {
+            playerHp = lowAttack(playerHp, 10);
+        }
+    }
+    // Spectral Chain (70-90)
+    else {
+        System.out.println("Hades throws a spectral chain, preventing your next attack!");
+        stun();
     }
 
-    //zeus 
-    public static int zeusAttack(int playerHp,int opponentHp) {
+    return playerHp;
+}
 
-        int probability = rand.nextInt(100);
-        
-        //0-50
-        if (probability < 50) {
-            System.out.println("super strength");
-            playerHp = medAttack(playerHp);
-        }
-        //90-99
-        else if(probability < 99 && probability > 90) {
-            System.out.println("lighting strike");
-            playerHp = heavyAttack(playerHp);
-        }
-        //50-70
-        else if(probability < 70 && probability > 50) {
-            System.out.println("Zeus's Bestiary");
-            //STILL REMAINING TO ADD PROBABILITY OF DIFFERENT ANIMAL AND THERE ATTACK
-            for(int x = 0; x < 3; x++) {
-                playerHp = lowAttack(playerHp);
-            }
-        }
-        //70-90
-        else {
-            System.out.println("divine judgement");
-            //REMAINING TO ADD THE METHOD
-            //divineJudgement();
-        }
+// Apollo
+public static int apolloAttack(int playerHp, int opponentHp) {
 
-        return playerHp;
+    int probability = rand.nextInt(100);
+
+    // Medium Attack (0-50)
+    if (probability < 50) {
+        System.out.println("Apollo emits a dazzling Solar Flare, causing 25 damage!");
+        playerHp = medAttack(playerHp, 25);
     }
-    
+    // Heavy Attack (90-99)
+    else if (probability < 99 && probability > 90) {
+        System.out.println("Apollo performs a mesmerizing Musical Symphony, dealing 45 damage!");
+        playerHp = heavyAttack(playerHp, 45);
+    }
+    // Eclipse Cascade (50-70)
+    else if (probability < 70 && probability > 50) {
+        System.out.println("Apollo creates a captivating Eclipse Cascade, causing 10 damage!");
+        for (int x = 0; x < 3; x++) {
+            playerHp = lowAttack(playerHp, 10);
+        }
+    }
+    // Harmonic Resonance (70-90)
+    else {
+        System.out.println("Apollo's Harmonic Resonance leaves you stunned!");
+        stun();
+    }
+
+    return playerHp;
+}
+
+// Zeus
+public static int zeusAttack(int playerHp, int opponentHp) {
+
+    int probability = rand.nextInt(100);
+
+    // Medium Attack (0-50)
+    if (probability < 50) {
+        System.out.println("Zeus channels his Super Strength, dealing 25 damage!");
+        playerHp = medAttack(playerHp, 25);
+    }
+    // Heavy Attack (90-99)
+    else if (probability < 99 && probability > 90) {
+        System.out.println("Zeus unleashes a devastating Lightning Strike, causing 45 damage!");
+        playerHp = heavyAttack(playerHp, 45);
+    }
+    // Zeus's Bestiary (50-70)
+    else if (probability < 70 && probability > 50) {
+        System.out.println("Zeus summons a mythical creature, dealing 10 damage!");
+        // STILL REMAINING TO ADD PROBABILITY OF DIFFERENT ANIMAL AND THEIR ATTACK
+        for (int x = 0; x < 3; x++) {
+            playerHp = lowAttack(playerHp, 10);
+        }
+    }
+    // Divine Judgement (70-90)
+    else {
+        System.out.println("Zeus poses a divine dilemma with Divine Judgement!");
+        // REMAINING TO ADD THE METHOD
+        // divineJudgement();
+    }   
 
 //method for clearing the terminal 
     public static void clearTerminal() {

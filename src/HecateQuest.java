@@ -61,6 +61,8 @@ public class HecateQuest {
 
     //the method story is called if user select to view story from menu option
     public static void story() {
+        //before story the terminal should be clear for apperance purposely
+        clearTerminal();
         //the whole basic story will be shown on the terminal
         System.out.println("");
         System.out.println("You are the Goddess of Magic, Hecate.");
@@ -69,10 +71,10 @@ public class HecateQuest {
         System.out.println("All the gods who smelled it became uncontrollable and started to wreak havoc on Earth.");
         System.out.println("It is now your responsibility to protect the Earth by stopping these rogue gods.");
         System.out.println("Your powers are:");
-        System.out.println("- Healing (Heal your HP to 100, however your HP shall be below 10)");
+        System.out.println("- Healing (Heal your HP to 100, only if it's below 10)");
         System.out.println("- Elemental Manipulation (Fire, Water, Air, Earth)");
-        System.out.println("- Necromancy (Your Best attack but using it also decrease your HP)");
-        System.out.println("- Illusion (prevents opponents from attacking)");
+        System.out.println("- Necromancy (Summon the spirits from underworld)");
+        System.out.println("- Illusion (prevents opponents from attacking by creating a illusion)");
         System.out.println("Your main mission is to take on the rogue gods, defeat them using your powers.");
         System.out.println("Good luck, Hecate! The fate of Earth lies in your hands.");
         System.out.println("");

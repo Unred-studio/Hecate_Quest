@@ -124,7 +124,7 @@ public class HecateQuest {
                             //If lost then prompt to ask if want to leave to menu or play again
                             System.out.println("You lost the battle with zeus");
                             System.out.println("Would you like to exit[0] or play again[1]: ");
-                            String choice = scan.nextInt();
+                            int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
                             }

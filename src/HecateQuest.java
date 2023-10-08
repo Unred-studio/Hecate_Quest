@@ -16,8 +16,9 @@ public class HecateQuest {
     //similarly declaring condition, playerHp and opponentHp
     private static boolean condition;
     private static int[] hp = new int[2];
-    //private static int playerHp;
-    //private static int opponentHp;
+   
+   //declaring stunner varible to keep track if someone used or got stun
+   private static boolean stunner = false; //it shall be fasle, if true then skips the chance 
 
 
     public static void main(String[] args) {
@@ -425,6 +426,8 @@ public class HecateQuest {
     //the method design for player to choice the attack of their choice
     public static int[] playerAttack(int[] hp) {
 
+
+        if (!(stunner)) {
         //print all the attacks
         System.out.println("");
         System.out.println("Please choice your attack: ");
@@ -459,6 +462,11 @@ public class HecateQuest {
                 condition = true;
             }
         } while(condition);
+
+        }
+        else {
+            System.out.println("You are stunned and cannot attack!");
+        }
 
         //return opponet's hp only 
         return hp;

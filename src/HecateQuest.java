@@ -423,7 +423,7 @@ public class HecateQuest {
 
 
     //the method design for player to choice the attack of their choice
-    public static int playerAttack(int playerHp, int opponentHp) {
+    public static int[] playerAttack(int[] hp) {
 
         //print all the attacks
         System.out.println("");
@@ -440,20 +440,20 @@ public class HecateQuest {
             String attack = scan.nextLine();
 
             if(attack.charAt(0) == 'f') {
-                opponentHp = lowAttack(opponentHp);
+                int[1] = lowAttack(int[1]);
             } else if(attack.charAt(0) == 'w') {
-                opponentHp = lowAttack(opponentHp);
+                int[1] = lowAttack(int[1]);
             } else if(attack.charAt(0) == 'e') {
-                opponentHp = lowAttack(opponentHp);
+                int[1] = lowAttack(int[1]);
             } else if(attack.charAt(0) == 'a') {
-                opponentHp = lowAttack(opponentHp);
+                int[1] = lowAttack(int[1]);
             } else if(attack.charAt(0) == 'i') {
                 stun();
             } else if(attack.charAt(0) == 'n') {
-                opponentHp = heavyAttack(opponentHp);
+                int[1] = heavyAttack(int[1]);
             } else if(attack.charAt(0) == 'h') {
                 System.out.println("Hecate restored its Hp to 100");
-                playerHp = heal(playerHp);
+                int[0] = heal(int[0]);
             } else {
                 System.out.println("Please enter the valid char");
                 condition = true;
@@ -461,25 +461,25 @@ public class HecateQuest {
         } while(condition);
 
         //return opponet's hp only 
-        return opponentHp;
+        return hp;
     }
 
 
     //opponent attack check which god is fighting and call the particular method of that god
-    public static int opponentAttack(String god, int playerHp, int opponentHp) {
+    public static int[] opponentAttack(String god, int[] hp) {
         if (god.equals("Ares")) {
-            playerHp = aresAttack(playerHp, opponentHp);
+            hp = aresAttack(hp);
         } else if (god.equals("Artemis")) {
-            playerHp = artemisAttack(playerHp, opponentHp);
+            hp = artemisAttack(hp);
         } else if (god.equals("Hades")) {
-            playerHp = hadesAttack(playerHp, opponentHp);
+            hp = hadesAttack(hp);
         } else if (god.equals("Apollo")) {
-            playerHp = apolloAttack(playerHp, opponentHp);
+            hp = apolloAttack(hp);
         } else {
-            playerHp = zeusAttack(playerHp, opponentHp);
+            hp = zeusAttack(hp);
         }
         //at last return player's hp
-        return playerHp;
+        return hp;
     }
 
     //below are all the basic attacks(unmodified, can be used by anyone)

@@ -534,7 +534,7 @@ public static int[] aresAttack(int[] hp) {
     }
     // Tactical Strike (50-70)
     else if (probability < 70 && probability > 50) {
-        System.out.println("Ares strikes swiftly, hitting you three times for 25 damage!");
+        System.out.println("Ares strikes swiftly, hitting you three times with 10 damage each time!");
         for (int x = 0; x < 3; x++) {
             hp[0] = lowAttack(hp[0]);
         }

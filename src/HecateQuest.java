@@ -492,7 +492,7 @@ public class HecateQuest {
         }
         }
         else {
-            
+            stunner = false;
         }
         //at last return player's hp
         return hp;

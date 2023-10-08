@@ -596,7 +596,7 @@ public static int[] hadesAttack(int[] hp) {
     }
     // Cursed Ground (50-70)
     else if (probability < 70 && probability > 50) {
-        System.out.println("Hades makes the ground unbearable, causing 10 damage!");
+        System.out.println("Hades makes the ground unbearable, causing 10 damage thrice!");
         for (int x = 0; x < 3; x++) {
             hp[0] = lowAttack(hp[0]);
         }
@@ -627,7 +627,7 @@ public static int[] apolloAttack(int[] hp) {
     }
     // Eclipse Cascade (50-70)
     else if (probability < 70 && probability > 50) {
-        System.out.println("Apollo creates a captivating Eclipse Cascade, causing 10 damage!");
+        System.out.println("Apollo creates a captivating Eclipse Cascade, causing 10 damagen thrice!");
         for (int x = 0; x < 3; x++) {
             hp[0] = lowAttack(hp[0]);
         }

@@ -440,20 +440,20 @@ public class HecateQuest {
             String attack = scan.nextLine();
 
             if(attack.charAt(0) == 'f') {
-                int[1] = lowAttack(int[1]);
+                hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'w') {
-                int[1] = lowAttack(int[1]);
+                hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'e') {
-                int[1] = lowAttack(int[1]);
+                hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'a') {
-                int[1] = lowAttack(int[1]);
+                hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'i') {
                 stun();
             } else if(attack.charAt(0) == 'n') {
-                int[1] = heavyAttack(int[1]);
+                hp[1] = heavyAttack(hp[1]);
             } else if(attack.charAt(0) == 'h') {
                 System.out.println("Hecate restored its Hp to 100");
-                int[0] = heal(int[0]);
+                hp[0] = heal(hp[0]);
             } else {
                 System.out.println("Please enter the valid char");
                 condition = true;

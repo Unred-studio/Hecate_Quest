@@ -101,8 +101,11 @@ public class HecateQuest {
     }
 
 
-    //for the playGame method, it will call the main battle method[ares, artimes...] one by one
+    //after the story(or directly from menu) the player comes to playGame method
     public static void playGame() {
+        //clear the terminal containing the story or menu
+        clearTerminal();
+        //after the story(or directly from menu) the player comes to playGame method
         //the if statements is used such that the player can only go to next level if he has defeated the god of current level
         //game start with Ares
         if(ares()) {
@@ -117,19 +120,64 @@ public class HecateQuest {
                             //basic you won message, called using the victory method
                             //victory();
                         } else {
-                            menu();
+                            //If lost then prompt to ask if want to leave to menu or play again
+                            System.out.println("You lost the battle with zeus");
+                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            String choice = scan.nextInt();
+                            if (choice == 1) {
+                                playGame();
+                            }
+                            else  {
+                                menu();
+                            }
                         }
                     } else {
-                        menu();
+                        //If lost then prompt to ask if want to leave to menu or play again
+                         System.out.println("You lost the battle with Apollo");
+                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            String choice = scan.nextInt();
+                            if (choice == 1) {
+                                playGame();
+                            }
+                            else  {
+                                menu();
+                            }
                     }
                 } else {
-                    menu();
+                    //If lost then prompt to ask if want to leave to menu or play again
+                    System.out.println("You lost the battle with Hades");
+                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            String choice = scan.nextInt();
+                            if (choice == 1) {
+                                playGame();
+                            }
+                            else  {
+                                menu();
+                            }
                 }
             } else {
-                menu();
+                //If lost then prompt to ask if want to leave to menu or play again
+                System.out.println("You lost the battle with Artemis");
+                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            String choice = scan.nextInt();
+                            if (choice == 1) {
+                                playGame();
+                            }
+                            else  {
+                                menu();
+                            }
             }
         } else {
-            menu();
+            //If lost then prompt to ask if want to leave to menu or play again
+            System.out.println("You lost the battle with Ares");
+                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            String choice = scan.nextInt();
+                            if (choice == 1) {
+                                playGame();
+                            }
+                            else  {
+                                menu();
+                            }
         }
     }
 

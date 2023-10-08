@@ -518,25 +518,25 @@ public class HecateQuest {
     //attack of each god starts from here, everything thing is same for each god execpt for the attack type
 
  // Ares
-public static int aresAttack(int playerHp, int opponentHp) {
+public static int[] aresAttack(int[] hp) {
 
     int probability = rand.nextInt(100);
 
     // Low Attack (0-50)
     if (probability < 50) {
         System.out.println("Ares charges with a fury, dealing 10 damage!");
-        playerHp = lowAttack(playerHp, 10);
+        hp[0] = lowAttack(hp[0]);
     }
     // Heavy Attack (90-99)
     else if (probability < 99 && probability > 90) {
         System.out.println("Ares enters a berserk rage, smashing for 45 damage!");
-        playerHp = heavyAttack(playerHp, 45);
+        hp[0] = heavyAttack(hp[0]);
     }
     // Tactical Strike (50-70)
     else if (probability < 70 && probability > 50) {
         System.out.println("Ares strikes swiftly, hitting you three times for 25 damage!");
         for (int x = 0; x < 3; x++) {
-            playerHp = lowAttack(playerHp, 25);
+            hp[0] = lowAttack(hp[0]);
         }
     }
     // Battle Cry (70-90)
@@ -545,29 +545,29 @@ public static int aresAttack(int playerHp, int opponentHp) {
         stun();
     }
 
-    return playerHp;
+    return hp;
 }
 
 // Artemis
-public static int artemisAttack(int playerHp, int opponentHp) {
+public static int[] artemisAttack(int[] hp) {
 
     int probability = rand.nextInt(100);
 
     // Medium Attack (0-50)
     if (probability < 50) {
         System.out.println("Artemis summons rapid Wild Growth, causing 25 damage!");
-        playerHp = medAttack(playerHp, 25);
+        hp[0] = medAttack(hp[0]);
     }
     // Heavy Attack (90-99)
     else if (probability < 99 && probability > 90) {
         System.out.println("Artemis harnesses Moonlight energy, dealing 45 damage!");
-        playerHp = heavyAttack(playerHp, 45);
+        hp[0] = heavyAttack(hp[0]);
     }
     // Sylvan Arrows (50-70)
     else if (probability < 70 && probability > 50) {
         System.out.println("Artemis fires a barrage of Sylvan Arrows, each dealing 10 damage!");
         for (int x = 0; x < 3; x++) {
-            playerHp = lowAttack(playerHp, 10);
+            hp[0] = lowAttack(hp[0]);
         }
     }
     // Evasion (70-90)
@@ -576,29 +576,29 @@ public static int artemisAttack(int playerHp, int opponentHp) {
         stun();
     }
 
-    return playerHp;
+    return hp;
 }
 
 // Hades
-public static int hadesAttack(int playerHp, int opponentHp) {
+public static int[] hadesAttack(int[] hp) {
 
     int probability = rand.nextInt(100);
 
     // Medium Attack (0-50)
     if (probability < 50) {
         System.out.println("Hades summons the undead, causing 25 damage!");
-        playerHp = medAttack(playerHp, 25);
+        hp[0] = medAttack(hp[0]);
     }
     // Heavy Attack (90-99)
     else if (probability < 99 && probability > 90) {
         System.out.println("Hades releases a powerful Necrotic Blast, dealing 45 damage!");
-        playerHp = heavyAttack(playerHp, 45);
+        hp[0] = heavyAttack(hp[0]);
     }
     // Cursed Ground (50-70)
     else if (probability < 70 && probability > 50) {
         System.out.println("Hades makes the ground unbearable, causing 10 damage!");
         for (int x = 0; x < 3; x++) {
-            playerHp = lowAttack(playerHp, 10);
+            hp[0] = lowAttack(hp[0]);
         }
     }
     // Spectral Chain (70-90)
@@ -607,29 +607,29 @@ public static int hadesAttack(int playerHp, int opponentHp) {
         stun();
     }
 
-    return playerHp;
+    return hp;
 }
 
 // Apollo
-public static int apolloAttack(int playerHp, int opponentHp) {
+public static int[] apolloAttack(int[] hp) {
 
     int probability = rand.nextInt(100);
 
     // Medium Attack (0-50)
     if (probability < 50) {
         System.out.println("Apollo emits a dazzling Solar Flare, causing 25 damage!");
-        playerHp = medAttack(playerHp, 25);
+        hp[0] = medAttack(hp[0]);
     }
     // Heavy Attack (90-99)
     else if (probability < 99 && probability > 90) {
         System.out.println("Apollo performs a mesmerizing Musical Symphony, dealing 45 damage!");
-        playerHp = heavyAttack(playerHp, 45);
+        hp[0] = heavyAttack(hp[0]);
     }
     // Eclipse Cascade (50-70)
     else if (probability < 70 && probability > 50) {
         System.out.println("Apollo creates a captivating Eclipse Cascade, causing 10 damage!");
         for (int x = 0; x < 3; x++) {
-            playerHp = lowAttack(playerHp, 10);
+            hp[0] = lowAttack(hp[0]);
         }
     }
     // Harmonic Resonance (70-90)
@@ -638,30 +638,30 @@ public static int apolloAttack(int playerHp, int opponentHp) {
         stun();
     }
 
-    return playerHp;
+    return hp;
 }
 
 // Zeus
-public static int zeusAttack(int playerHp, int opponentHp) {
+public static int[] zeusAttack(int[] hp) {
 
     int probability = rand.nextInt(100);
 
     // Medium Attack (0-50)
     if (probability < 50) {
         System.out.println("Zeus channels his Super Strength, dealing 25 damage!");
-        playerHp = medAttack(playerHp, 25);
+        hp[0] = medAttack(hp[0]);
     }
     // Heavy Attack (90-99)
     else if (probability < 99 && probability > 90) {
         System.out.println("Zeus unleashes a devastating Lightning Strike, causing 45 damage!");
-        playerHp = heavyAttack(playerHp, 45);
+        hp[0] = heavyAttack(hp[0]);
     }
     // Zeus's Bestiary (50-70)
     else if (probability < 70 && probability > 50) {
         System.out.println("Zeus summons a mythical creature, dealing 10 damage!");
         // STILL REMAINING TO ADD PROBABILITY OF DIFFERENT ANIMAL AND THEIR ATTACK
         for (int x = 0; x < 3; x++) {
-            playerHp = lowAttack(playerHp, 10);
+            hp[0] = lowAttack(hp[0]);
         }
     }
     // Divine Judgement (70-90)
@@ -670,6 +670,8 @@ public static int zeusAttack(int playerHp, int opponentHp) {
         // REMAINING TO ADD THE METHOD
         // divineJudgement();
     }   
+    return hp
+}
 
 //method for clearing the terminal 
     public static void clearTerminal() {
@@ -683,5 +685,4 @@ public static int zeusAttack(int playerHp, int opponentHp) {
             new ProcessBuilder("clear").inheritIO().start().waitFor();
         }
     }
-
 }

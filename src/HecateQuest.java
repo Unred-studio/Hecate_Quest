@@ -688,14 +688,19 @@ public static int[] zeusAttack(int[] hp) {
 
 //method for clearing the terminal 
     public static void clearTerminal() {
-        //check it the os is windows 
+    try {
+        // Check if the OS is Windows
         if (System.getProperty("os.name").contains("Windows")) {
             // For Windows
-            //clear the terminal by creating a new class, processbuilder which is use to run the command for terminal
             new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
         } else {
             // For Unix/Linux/Mac
             new ProcessBuilder("clear").inheritIO().start().waitFor();
         }
+    } catch (IOException | InterruptedException e) {
+        // Handle the exceptions here, e.g., print an error message
+        System.err.println("Error clearing terminal: " + e.getMessage());
     }
+}
+
 }

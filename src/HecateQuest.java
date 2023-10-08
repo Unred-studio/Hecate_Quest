@@ -9,13 +9,16 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class HecateQuest {
-    //Declaring scanner object and condition varible such that it is available for every method
+    //Declaring scanner object and random object at the class level so every method can use it
     private static Scanner scan = new Scanner(System.in);
     private static Random rand = new Random();
 
+    //similarly declaring condition, playerHp and opponentHp
     private static boolean condition;
     private static int playerHp;
     private static int opponentHp;
+
+    
     public static void main(String[] args) {
         //for main method, it just call the game methd and nothing else
         game();

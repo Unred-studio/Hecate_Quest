@@ -464,8 +464,11 @@ public class HecateQuest {
         } while(condition);
 
         }
+        //if the stunner is true then wont allow to attack 
         else {
             System.out.println("You are stunned and cannot attack!");
+            //making the value default as it has been used already 
+            stunner = false; 
         }
 
         //return opponet's hp only 
@@ -475,6 +478,7 @@ public class HecateQuest {
 
     //opponent attack check which god is fighting and call the particular method of that god
     public static int[] opponentAttack(String god, int[] hp) {
+        if (!(stunner)) {
         if (god.equals("Ares")) {
             hp = aresAttack(hp);
         } else if (god.equals("Artemis")) {
@@ -485,6 +489,10 @@ public class HecateQuest {
             hp = apolloAttack(hp);
         } else {
             hp = zeusAttack(hp);
+        }
+        }
+        else {
+            
         }
         //at last return player's hp
         return hp;

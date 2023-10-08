@@ -182,11 +182,15 @@ public class HecateQuest {
     }
 
 
+
+
     //Level 1: Heacte Vs Ares
     public static boolean ares() {
         //the string god is used to let the other repeatative methods know that it is called for ares so keep the story in accord
         String god = "Ares";
 
+        //clearing the terminal to improve visual 
+        clearTerminal();
         //basic introduction for the god and the battle
         System.out.println("Welcome to the Battle Ground!");
         System.out.println("Here, you will face a fierce fight with Ares, the God of War.");
@@ -222,6 +226,11 @@ public class HecateQuest {
     //all things are same as ares method, just the story and god has changed to artimes
     public static boolean artemis() {
         String god = "Artemis";
+
+        //clearing the terminal to improve visual 
+        clearTerminal();
+
+        //introduction to god
         System.out.println("\nWelcome to the Jungles!");
         System.out.println("Here, you will confront Artemis, the Goddess of the Hunt.");
         System.out.println("Navigate through the dense wilderness and prove your mettle!");
@@ -254,6 +263,10 @@ public class HecateQuest {
     //all things are same as ares method, just the story and god has changed to hades
     public static boolean hades() {
         String god = "Hades";
+
+        //clearing the terminal to improve visual 
+        clearTerminal();
+        //introduction to god
         System.out.println("\nWelcome to the Underworld!");
         System.out.println("In this dark realm, you will clash with Hades, the God of the Underworld.");
         System.out.println("Face the shadows and the undead in your quest!");
@@ -287,6 +300,10 @@ public class HecateQuest {
     //all things are same as ares method, just the story and god has changed to apollo
     public static boolean apollo() {
         String god = "Apollo";
+
+        //clearing the terminal to improve visual 
+        clearTerminal();
+        //intro to god
         System.out.println("\nWelcome to the Sunlit Realm!");
         System.out.println("Prepare to challenge Apollo, the God of the Sun and Music.");
         System.out.println("Bask in the sunlight and harness the power of music and light!");
@@ -320,6 +337,10 @@ public class HecateQuest {
     //all things are same as ares method, just the story and god has changed to zeus
     public static boolean zeus() {
         String god = "Zeus";
+
+        //clearing the terminal to improve visual 
+        clearTerminal();
+        //intro to god
         System.out.println("\nWelcome to Mount Olympus!");
         System.out.println("You have reached the home of the gods.");
         System.out.println("Now, confront Zeus, the King of the Gods, and bring order to Olympus!");

@@ -199,10 +199,11 @@ public class HecateQuest {
         //waiting for the player to read the introduction and if they wish then they can continue or quit
         do {
             condition = false;
+            System.out.println("");
             System.out.println("Are you ready?[y/n]: ");
             String ready = scan.nextLine();
 
-            //if they want to play, it doesnnothing, just let the player pass
+            //if they want to play, it does nothing, just let the player pass
             if(ready.charAt(0) == 'y') {
             }
             //if not then return to menu
@@ -223,6 +224,9 @@ public class HecateQuest {
             return false;
         }
     }
+
+
+
     //all things are same as ares method, just the story and god has changed to artimes
     public static boolean artemis() {
         String god = "Artemis";
@@ -371,16 +375,28 @@ public class HecateQuest {
     }
 
 
+
+
     //the same fight will be called for each level, execpt the argument of god will change which will help to give unique attack name to each god
     public static boolean fight(String god) {
+
+        //Before each battle, both player's hp shall be 100
          playerHp = 100;
          opponentHp = 100;
+         //using the winner to store the result of match
         boolean winner = false;
     
+        //the loop repeats until the hp or both of them is above 0
+        //the condition never get false as if one of them get below 0, the other one win and loop break
         while (playerHp > 0 && opponentHp > 0) {
+
+            clearTerminal();
+
             // Player's turn to attack
+            //announcing the hp of player and opponent 
             System.out.println("Hacate's Hp: " + playerHp);
             System.out.println(god + "'s Hp: " + opponentHp);
+            //calling the player attack method 
             opponentHp = playerAttack(playerHp, opponentHp);
     
             // Check if the opponent's HP has reached 0 or less

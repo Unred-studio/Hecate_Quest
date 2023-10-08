@@ -136,7 +136,7 @@ public class HecateQuest {
                         //If lost then prompt to ask if want to leave to menu or play again
                          System.out.println("You lost the battle with Apollo");
                             System.out.println("Would you like to exit[0] or play again[1]: ");
-                            String choice = scan.nextInt();
+                            int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
                             }
@@ -148,7 +148,7 @@ public class HecateQuest {
                     //If lost then prompt to ask if want to leave to menu or play again
                     System.out.println("You lost the battle with Hades");
                             System.out.println("Would you like to exit[0] or play again[1]: ");
-                            String choice = scan.nextInt();
+                            int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
                             }
@@ -160,7 +160,7 @@ public class HecateQuest {
                 //If lost then prompt to ask if want to leave to menu or play again
                 System.out.println("You lost the battle with Artemis");
                             System.out.println("Would you like to exit[0] or play again[1]: ");
-                            String choice = scan.nextInt();
+                            int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
                             }
@@ -172,7 +172,7 @@ public class HecateQuest {
             //If lost then prompt to ask if want to leave to menu or play again
             System.out.println("You lost the battle with Ares");
                             System.out.println("Would you like to exit[0] or play again[1]: ");
-                            String choice = scan.nextInt();
+                            int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
                             }

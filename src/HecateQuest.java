@@ -420,16 +420,18 @@ public class HecateQuest {
 
 
 
-//BELOW THIS COMMENT IS REMAINING
 
+    //the method design for player to choice the attack of their choice
     public static int playerAttack(int playerHp, int opponentHp) {
 
+        //print all the attacks
         System.out.println("");
         System.out.println("Please choice your attack: ");
         System.out.println("Elemental Manupulation [Fire(f), Water(w), Earth(e), Air(a)]");
         System.out.println("Illution[i]");
         System.out.println("Necromancy[n]");
         System.out.println("Healing[h]");
+        //ask for which attack to choice 
         do {
             condition = false;
             System.out.println("");
@@ -457,11 +459,12 @@ public class HecateQuest {
             }
         } while(condition);
 
-
+        //return opponet's hp only 
         return opponentHp;
     }
 
 
+    //opponent attack check which god is fighting and call the particular method of that god
     public static int opponentAttack(String god, int playerHp, int opponentHp) {
         if (god.equals("Ares")) {
             playerHp = aresAttack(playerHp, opponentHp);
@@ -474,34 +477,46 @@ public class HecateQuest {
         } else {
             playerHp = zeusAttack(playerHp, opponentHp);
         }
+        //at last return player's hp
         return playerHp;
     }
 
+    //below are all the basic attacks(unmodified, can be used by anyone)
+
+    //healing restore hp to 100
     public static int heal(int initalHp) {
         initalHp = 100;
         return initalHp;
     }
 
+    //heavy attack, decrease the provided hp by 45
     public static int heavyAttack(int opponentHp) {
         opponentHp-= 45;
         return opponentHp;
     }
 
+    //low attack, decrease the provided hp by 10
     public static int lowAttack(int opponentHp) {
         opponentHp-= 10;
         return opponentHp;
     }
 
+    //med attack, decrease the provided hp by 25
     public static int medAttack(int opponentHp) {
         opponentHp-= 25;
         return opponentHp;
     }
 
+    //STUN
     public static void stun() {
         //NEED TO THINK SOMTHING FOR THIS
     }
 
 
+
+    //attack of each god starts from here, everything thing is same for each god execpt for the attack type
+
+    //ares
     public static int aresAttack(int playerHp,int opponentHp) {
 
         int probability = rand.nextInt(100);
@@ -533,6 +548,7 @@ public class HecateQuest {
     }
 
 
+    //artemis 
     public static int artemisAttack(int playerHp,int opponentHp) {
 
         int probability = rand.nextInt(100);
@@ -567,6 +583,7 @@ public class HecateQuest {
     }
     
 
+    //hades
     public static int hadesAttack(int playerHp,int opponentHp) {
 
         int probability = rand.nextInt(100);
@@ -598,6 +615,7 @@ public class HecateQuest {
     }
 
 
+    //apollo
     public static int apolloAttack(int playerHp,int opponentHp) {
 
         int probability = rand.nextInt(100);
@@ -628,7 +646,7 @@ public class HecateQuest {
         return playerHp;
     }
 
-
+    //zeus 
     public static int zeusAttack(int playerHp,int opponentHp) {
 
         int probability = rand.nextInt(100);
@@ -662,6 +680,7 @@ public class HecateQuest {
     }
     
 
+//method for clearing the terminal 
     public static void clearTerminal() {
         //check it the os is windows 
         if (System.getProperty("os.name").contains("Windows")) {

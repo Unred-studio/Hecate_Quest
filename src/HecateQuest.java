@@ -15,7 +15,7 @@ public class HecateQuest {
 
     //similarly declaring condition, playerHp and opponentHp
     private static boolean condition;
-    private static int[] hp;
+    private static int[] hp = new int[2];
     //private static int playerHp;
     //private static int opponentHp;
 

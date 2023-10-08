@@ -670,7 +670,7 @@ public static int[] zeusAttack(int[] hp) {
         // REMAINING TO ADD THE METHOD
         // divineJudgement();
     }   
-    return hp
+    return hp;
 }
 
 //method for clearing the terminal 

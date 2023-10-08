@@ -18,7 +18,7 @@ public class HecateQuest {
     private static int playerHp;
     private static int opponentHp;
 
-    
+
     public static void main(String[] args) {
         //for main method, it just call the game methd and nothing else
         game();
@@ -28,6 +28,7 @@ public class HecateQuest {
         //call the menu method and check what user want; story or playgame or exit
         do {
             condition = false;
+            //userChoice contain the user typed letter in upper case
             char userChoice = menu().toUpperCase().charAt(0);
             if (userChoice == 'P') {
                 playGame();
@@ -37,6 +38,7 @@ public class HecateQuest {
                 break;
             } else {
                 System.out.println("Plese Enter the vaild char");
+                //defaultly the condition is false but in case user doesn't give neccessary input, it turn true again to loop the do while statement
                 condition = true;
             }
         } while(condition);
@@ -45,12 +47,15 @@ public class HecateQuest {
 
     //menu method, ask the user to choice between playgame or story or exit, after losing the player shall reach to this method
     public static String menu() {
+        //this method is defined at the end of program and help to clear the terminal
+        clearTerminal();
         System.out.println("");
         System.out.println("PlayGame[p]");
         System.out.println("Story[s]");
         System.out.println("Exit[e]");
         System.out.print("Your Choice: ");
         String menuChoice = scan.nextLine();
+        //menu takes no input but return the user's choice to game method 
         return menuChoice;
     }
 
@@ -569,5 +574,17 @@ public class HecateQuest {
         return playerHp;
     }
     
+
+    public static void clearTerminal() {
+        //check it the os is windows 
+        if (System.getProperty("os.name").contains("Windows")) {
+            // For Windows
+            //clear the terminal by creating a new class, processbuilder which is use to run the command for terminal
+            new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+        } else {
+            // For Unix/Linux/Mac
+            new ProcessBuilder("clear").inheritIO().start().waitFor();
+        }
+    }
 
 }

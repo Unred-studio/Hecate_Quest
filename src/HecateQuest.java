@@ -15,8 +15,9 @@ public class HecateQuest {
 
     //similarly declaring condition, playerHp and opponentHp
     private static boolean condition;
-    private static int playerHp;
-    private static int opponentHp;
+    private static int[] hp;
+    //private static int playerHp;
+    //private static int opponentHp;
 
 
     public static void main(String[] args) {
@@ -380,36 +381,36 @@ public class HecateQuest {
     //the same fight will be called for each level, execpt the argument of god will change which will help to give unique attack name to each god
     public static boolean fight(String god) {
 
-        //Before each battle, both player's hp shall be 100
-         playerHp = 100;
-         opponentHp = 100;
+        //Before each battle, both player's hp shall be 100 (index 0 is for playerHp and index 1 is for opponent's Hp)
+         hp[0] = 100;
+         hp[1] = 100;
          //using the winner to store the result of match
         boolean winner = false;
     
         //the loop repeats until the hp or both of them is above 0
         //the condition never get false as if one of them get below 0, the other one win and loop break
-        while (playerHp > 0 && opponentHp > 0) {
+        while (hp[0] > 0 && hp[1] > 0) {
 
             clearTerminal();
 
             // Player's turn to attack
             //announcing the hp of player and opponent 
-            System.out.println("Hacate's Hp: " + playerHp);
-            System.out.println(god + "'s Hp: " + opponentHp);
+            System.out.println("Hacate's Hp: " + hp[0]);
+            System.out.println(god + "'s Hp: " + hp[1]);
             //calling the player attack method 
-            opponentHp = playerAttack(playerHp, opponentHp);
+            hp = playerAttack(hp);
     
             // Check if the opponent's HP has reached 0 or less
-            if (opponentHp <= 0) {
+            if (hp[1] <= 0) {
                 winner = true;
                 break;
             }
     
             // Opponent's turn to attack
-            playerHp = opponentAttack(god, playerHp, opponentHp);
+            hp = opponentAttack(god, hp);
     
             // Check if the player's HP has reached 0 or less
-            if (playerHp <= 0) {
+            if (hp[0] <= 0) {
                 winner = false;
                 break;
             }

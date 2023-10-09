@@ -84,7 +84,7 @@ public class HecateQuest {
         //at the end of story, as the user if they want to play the game
         do {
             condition = false;
-            System.out.println("Are you ready to start the game[y/n]: ");
+            System.out.print("Are you ready to start the game[y/n]: ");
             String ready = scan.nextLine();
 
             //if they want to play the game, it will call playGame method
@@ -124,7 +124,7 @@ public class HecateQuest {
                         } else {
                             //If lost then prompt to ask if want to leave to menu or play again
                             System.out.println("You lost the battle with zeus");
-                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
@@ -136,7 +136,7 @@ public class HecateQuest {
                     } else {
                         //If lost then prompt to ask if want to leave to menu or play again
                          System.out.println("You lost the battle with Apollo");
-                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
@@ -148,7 +148,7 @@ public class HecateQuest {
                 } else {
                     //If lost then prompt to ask if want to leave to menu or play again
                     System.out.println("You lost the battle with Hades");
-                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
@@ -160,7 +160,7 @@ public class HecateQuest {
             } else {
                 //If lost then prompt to ask if want to leave to menu or play again
                 System.out.println("You lost the battle with Artemis");
-                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
@@ -172,7 +172,7 @@ public class HecateQuest {
         } else {
             //If lost then prompt to ask if want to leave to menu or play again
             System.out.println("You lost the battle with Ares");
-                            System.out.println("Would you like to exit[0] or play again[1]: ");
+                            System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
                                 playGame();
@@ -202,7 +202,7 @@ public class HecateQuest {
         do {
             condition = false;
             System.out.println("");
-            System.out.println("Are you ready?[y/n]: ");
+            System.out.print("Are you ready?[y/n]: ");
             String ready = scan.nextLine();
 
             //if they want to play, it does nothing, just let the player pass
@@ -244,7 +244,7 @@ public class HecateQuest {
         //waiting for the player to read the introduction and if they wish then they can continue or quit
         do {
             condition = false;
-            System.out.println("Are you ready?[y/n]: ");
+            System.out.print("Are you ready?[y/n]: ");
             String ready = scan.nextLine();
 
             //if they want to play, it doesnnothing, just let the player pass
@@ -280,7 +280,7 @@ public class HecateQuest {
         //waiting for the player to read the introduction and if they wish then they can continue or quit
         do {
             condition = false;
-            System.out.println("Are you ready?[y/n]: ");
+            System.out.print("Are you ready?[y/n]: ");
             String ready = scan.nextLine();
 
             //if they want to play, it doesnnothing, just let the player pass
@@ -317,7 +317,7 @@ public class HecateQuest {
 //waiting for the player to read the introduction and if they wish then they can continue or quit
         do {
             condition = false;
-            System.out.println("Are you ready?[y/n]: ");
+            System.out.print("Are you ready?[y/n]: ");
             String ready = scan.nextLine();
 
             //if they want to play, it doesnnothing, just let the player pass
@@ -354,7 +354,7 @@ public class HecateQuest {
         //waiting for the player to read the introduction and if they wish then they can continue or quit
         do {
             condition = false;
-            System.out.println("Are you ready?[y/n]: ");
+            System.out.print("Are you ready?[y/n]: ");
             String ready = scan.nextLine();
 
             //if they want to play, it doesnnothing, just let the player pass

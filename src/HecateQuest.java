@@ -85,6 +85,7 @@ public class HecateQuest {
         do {
             condition = false;
             System.out.print("Are you ready to start the game[y/n]: ");
+            scan.nextLine(); // Consume the newline character
             String ready = scan.nextLine();
 
             //if they want to play the game, it will call playGame method

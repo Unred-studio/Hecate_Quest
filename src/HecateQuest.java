@@ -111,6 +111,13 @@ public class HecateQuest {
         //the if statements is used such that the player can only go to next level if he has defeated the god of current level
         //game start with Ares
         if(ares()) {
+            clearTerminal();
+            System.out.println("You Won!");
+        
+            do{
+                System.out.print("Are you ready[y/n]: ");
+
+            }
             //after defeating Ares you will fight with the  Artemis
             if(artemis()) {
                 //After defeating Artemis, you will fight with the Hades

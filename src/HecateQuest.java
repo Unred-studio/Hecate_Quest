@@ -85,7 +85,6 @@ public class HecateQuest {
         do {
             condition = false;
             System.out.print("Are you ready to start the game[y/n]: ");
-            scan.nextLine(); // Consume the newline character
             String ready = scan.nextLine();
 
             //if they want to play the game, it will call playGame method
@@ -142,8 +141,6 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
-                                 // Consume the newline character left in the input buffer
-                                 scan.nextLine();
                                 playGame();
                             }
                             else  {
@@ -156,8 +153,6 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
-                                // Consume the newline character left in the input buffer
-                                scan.nextLine();
                                 playGame();
                             }
                             else  {
@@ -170,8 +165,6 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
-                                // Consume the newline character left in the input buffer
-                                scan.nextLine();
                                 playGame();
                             }
                             else  {
@@ -184,8 +177,6 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
-                                // Consume the newline character left in the input buffer
-                                scan.nextLine();
                                 playGame();
                             }
                             else  {

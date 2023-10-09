@@ -666,9 +666,7 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[0] = heavyAttack(hp[0]); 
-                hp[0] = heavyAttack(hp[0]);
-                hp[0] = heavyAttack(hp[0]);
+                victory();
             }
             else {
                 System.out.println("You are wrong!");
@@ -685,9 +683,7 @@ public class HecateQuest {
 
             if (answer == 'A') {
                 System.out.println("You were correct!");
-                hp[0] = heavyAttack(hp[0]); 
-                hp[0] = heavyAttack(hp[0]);
-                hp[0] = heavyAttack(hp[0]);
+                victory();
             }
             else {
                 System.out.println("You are wrong!");
@@ -704,9 +700,7 @@ public class HecateQuest {
 
             if (answer == 'B' || answer == 'C') {
                 System.out.println("You were correct!");
-                hp[0] = heavyAttack(hp[0]); 
-                hp[0] = heavyAttack(hp[0]);
-                hp[0] = heavyAttack(hp[0]); 
+                victory(); 
             }
             else {
                 System.out.println("You are wrong!");
@@ -723,9 +717,7 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[0] = heavyAttack(hp[0]); 
-                hp[0] = heavyAttack(hp[0]);
-                hp[0] = heavyAttack(hp[0]);
+                victory();
             }
             else {
                 System.out.println("You are wrong!");
@@ -742,9 +734,7 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[0] = heavyAttack(hp[0]); 
-                hp[0] = heavyAttack(hp[0]);
-                hp[0] = heavyAttack(hp[0]);
+                victory();
             }
             else {
                 System.out.println("You are wrong!");

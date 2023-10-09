@@ -37,7 +37,7 @@ public class HecateQuest {
             } else if(userChoice == 'S') {
                 story();
             } else if(userChoice == 'E') {
-                break;
+                
             } else {
                 System.out.println("Plese Enter the vaild char");
                 //defaultly the condition is false but in case user doesn't give neccessary input, it turn true again to loop the do while statement
@@ -621,6 +621,11 @@ public class HecateQuest {
         return opponentHp;
     }
 
+    public static int ultimateAttack(int opponentHp) {
+        opponentHp = 0;
+        return opponentHp;
+    }
+
     //divine judgement is the attack of zeus
     public static int[] divineJudgement(int[] hp) {
         //introduction to the divine judgement 
@@ -661,11 +666,11 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
             }
         }
         else if (randomQues == 1) {
@@ -676,11 +681,11 @@ public class HecateQuest {
 
             if (answer == 'A') {
                 System.out.println("You were correct!");
-                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
             }
         }
         else if (randomQues == 2) {
@@ -691,11 +696,11 @@ public class HecateQuest {
 
             if (answer == 'B' || answer == 'C') {
                 System.out.println("You were correct!");
-                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
             }
         }
         else if (randomQues == 3) {
@@ -706,11 +711,11 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
             }
         }
         else {
@@ -721,11 +726,11 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
             }
         }
 

@@ -124,14 +124,16 @@ public class HecateQuest {
                         } else {
                             //If lost then prompt to ask if want to leave to menu or play again
                             System.out.println("You lost the battle with zeus");
+                            do {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
-                            int choice = scan.nextInt();
-                            if (choice == 1) {
+                            int choice = scan.nextLine();
+                            if (choice.charAt[0] == '1') {
                                 playGame();
                             }
-                            else  {
+                            else if (choice.charAt[0] == '0') {
                                 menu();
                             }
+                        } while(condition)
                         }
                     } else {
                         //If lost then prompt to ask if want to leave to menu or play again

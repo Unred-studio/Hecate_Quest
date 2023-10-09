@@ -118,7 +118,7 @@ public class HecateQuest {
                 System.out.print("Are you ready to take battle with Artemis[y] or leave to menu[n]: ");
                 String input = scan.nextLine();
                 char choice = input.toUpperCase().charAt(0);
-                if (chocie == 'Y') {
+                if (choice == 'Y') {
                     
                 }
                 else if (choice == 'N') {
@@ -138,7 +138,7 @@ public class HecateQuest {
                     System.out.print("Are you ready to take battle with Hades[y] or leave to menu[n]: ");
                     String input = scan.nextLine();
                     char choice = input.toUpperCase().charAt(0);
-                    if (chocie == 'Y') {
+                    if (choice == 'Y') {
                         
                     }
                     else if (choice == 'N') {
@@ -158,7 +158,7 @@ public class HecateQuest {
                         System.out.print("Are you ready to take battle with Apollo[y] or leave to menu[n]: ");
                         String input = scan.nextLine();
                         char choice = input.toUpperCase().charAt(0);
-                        if (chocie == 'Y') {
+                        if (choice == 'Y') {
                             
                         }
                         else if (choice == 'N') {
@@ -178,7 +178,7 @@ public class HecateQuest {
                             System.out.print("Are you ready to take battle with Zeus[y] or leave to menu[n]: ");
                             String input = scan.nextLine();
                             char choice = input.toUpperCase().charAt(0);
-                            if (chocie == 'Y') {
+                            if (choice == 'Y') {
                                 
                             }
                             else if (choice == 'N') {

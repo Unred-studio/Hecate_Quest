@@ -116,8 +116,8 @@ public class HecateQuest {
             do{
                 condition = false;
                 System.out.print("Are you ready to take battle with Artemis[y] or leave to menu[n]: ");
-                String choice = scan.nextLine();
-                char choice = choice.toUpperCase().charAt(0);
+                String input = scan.nextLine();
+                char choice = input.toUpperCase().charAt(0);
                 if (chocie == 'Y') {
                     
                 }
@@ -136,8 +136,8 @@ public class HecateQuest {
                 do{
                     condition = false;
                     System.out.print("Are you ready to take battle with Hades[y] or leave to menu[n]: ");
-                    String choice = scan.nextLine();
-                    char choice = choice.toUpperCase().charAt(0);
+                    String input = scan.nextLine();
+                    char choice = input.toUpperCase().charAt(0);
                     if (chocie == 'Y') {
                         
                     }
@@ -156,8 +156,8 @@ public class HecateQuest {
                     do{
                         condition = false;
                         System.out.print("Are you ready to take battle with Apollo[y] or leave to menu[n]: ");
-                        String choice = scan.nextLine();
-                        char choice = choice.toUpperCase().charAt(0);
+                        String input = scan.nextLine();
+                        char choice = input.toUpperCase().charAt(0);
                         if (chocie == 'Y') {
                             
                         }
@@ -176,8 +176,8 @@ public class HecateQuest {
                         do{
                             condition = false;
                             System.out.print("Are you ready to take battle with Zeus[y] or leave to menu[n]: ");
-                            String choice = scan.nextLine();
-                            char choice = choice.toUpperCase().charAt(0);
+                            String input = scan.nextLine();
+                            char choice = input.toUpperCase().charAt(0);
                             if (chocie == 'Y') {
                                 
                             }
@@ -622,8 +622,114 @@ public class HecateQuest {
     }
 
     //divine judgement is the attack of zeus
-    public static void divineJudgement() {
+    public static int[] divineJudgement(int[] hp) {
+        //introduction to the divine judgement 
+        System.out.println("Zeus poses a divine dilemma:");
+        System.out.println("You stand at a crossroads, and you must choose your path wisely.");
+        System.out.println("Answer correctly to continue your journey, or Zeus shall prevail!");
 
+        //all the questions
+        String question1 = "Question 1: You have the power to save one of the following artifacts from destruction. Which one shall you save?\n" +
+                  "A) A legendary sword that can defeat any enemy.\n" +
+                  "B) A book containing the knowledge of all ancient magic spells.\n" +
+                  "C) A sacred amulet that can heal any wound.";
+        String question2 = "Question 2: A burning building houses a group of people. You can only save one. Who do you choose?\n" +
+                  "A) A young child\n" +
+                  "B) An elderly person\n" +
+                  "C) A trained firefighter.";
+        String question3 = "Question 3: You encounter a lost traveler in the wilderness. What do you offer to help them?\n" +
+                  "A) Food and water to sustain them on their journey.\n" +
+                  "B) A map and directions to their destination.\n" +
+                  "C) Protection and guidance to ensure their safety.";
+        String question4 = "Question 4: A powerful storm threatens to destroy a coastal village. What action do you take to protect the villagers?\n" +
+                  "A) Use your magic to calm the storm.\n" +
+                  "B) Create illution to Rally the villagers to evacuate to a safe location as soon as possible.\n" +
+                  "C) Seek the help of a sea deity to ward off the storm.";
+        String question5 = "Question 5: You discover an ancient artifact with the power to reshape reality. How do you handle this newfound power?\n" +
+                  "A) Use it to bring peace and prosperity to the world.\n" +
+                  "B) Safeguard it from those who would misuse it.\n" +
+                  "C) Destroy it to prevent its potential harm.";
+
+        //genrate a random number from 0 to 4 which will help to select a random question out of five
+        int randomQues = rand.nextInt(5);
+
+        if (randomQues == 0) {
+            System.out.println(question1);
+            System.out.print("Your answer (A/B/C): ");
+            String input = scan.nextLine();
+            char answer = input.toUpperCase().charAt(0);
+
+            if (answer == 'B') {
+                System.out.println("You were correct!");
+                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+            }
+            else {
+                System.out.println("You are wrong!");
+                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+            }
+        }
+        else if (randomQues == 1) {
+            System.out.println(question2);
+            System.out.print("Your answer (A/B/C): ");
+            String input = scan.nextLine();
+            char answer = input.toUpperCase().charAt(0);
+
+            if (answer == 'A') {
+                System.out.println("You were correct!");
+                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+            }
+            else {
+                System.out.println("You are wrong!");
+                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+            }
+        }
+        else if (randomQues == 2) {
+            System.out.println(question3);
+            System.out.print("Your answer (A/B/C): ");
+            String input = scan.nextLine();
+            char answer = input.toUpperCase().charAt(0);
+
+            if (answer == 'B' || answer == 'C') {
+                System.out.println("You were correct!");
+                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+            }
+            else {
+                System.out.println("You are wrong!");
+                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+            }
+        }
+        else if (randomQues == 3) {
+            System.out.println(question4);
+            System.out.print("Your answer (A/B/C): ");
+            String input = scan.nextLine();
+            char answer = input.toUpperCase().charAt(0);
+
+            if (answer == 'B') {
+                System.out.println("You were correct!");
+                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+            }
+            else {
+                System.out.println("You are wrong!");
+                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+            }
+        }
+        else {
+            System.out.println(question5);
+            System.out.print("Your answer (A/B/C): ");
+            String input = scan.nextLine();
+            char answer = input.toUpperCase().charAt(0);
+
+            if (answer == 'B') {
+                System.out.println("You were correct!");
+                hp[1] = 0; //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+            }
+            else {
+                System.out.println("You are wrong!");
+                hp[0] = 0; //hp[0] is your hp, if you gave wrong answer than you lost
+            }
+        }
+
+        return hp;
     }
    
 
@@ -780,8 +886,7 @@ public static int[] zeusAttack(int[] hp) {
     }
     // Divine Judgement (70-90)
     else {
-        System.out.println("Zeus poses a divine dilemma with Divine Judgement!");
-        divineJudgement();
+        hp = divineJudgement(hp);
     }   
     return hp;
 }
@@ -797,6 +902,7 @@ public static int[] zeusAttack(int[] hp) {
         System.out.println("The Earth is safe once again.");
         System.out.println("You are a true hero and protector of humanity.");
         System.out.println("Thank you for playing, and may the magic of Hecate guide you on your next adventure!");
+        menu();
     }
 
 }

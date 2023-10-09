@@ -50,7 +50,7 @@ public class HecateQuest {
     //menu method, ask the user to choice between playgame or story or exit, after losing the player shall reach to this method
     public static String menu() {
         //this method is defined at the end of program and help to clear the terminal
-        clearTerminal();
+        seprateTerminal();
         System.out.println("");
         System.out.println("PlayGame[p]");
         System.out.println("Story[s]");
@@ -64,7 +64,7 @@ public class HecateQuest {
     //the method story is called if user select to view story from menu option
     public static void story() {
         //before story the terminal should be clear for apperance purposely
-        clearTerminal();
+        seprateTerminal();
         //the whole basic story will be shown on the terminal
         System.out.println("");
         System.out.println("You are the Goddess of Magic, Hecate.");
@@ -106,28 +106,93 @@ public class HecateQuest {
     //after the story(or directly from menu) the player comes to playGame method
     public static void playGame() {
         //clear the terminal containing the story or menu
-        clearTerminal();
+        seprateTerminal();
         //after the story(or directly from menu) the player comes to playGame method
         //the if statements is used such that the player can only go to next level if he has defeated the god of current level
         //game start with Ares
         if(ares()) {
-            clearTerminal();
+            seprateTerminal();
             System.out.println("You Won!");
-        
             do{
-                System.out.print("Are you ready[y/n]: ");
-
-            }
+                condition = false;
+                System.out.print("Are you ready to take battle with Artemis[y] or leave to menu[n]: ");
+                String choice = scan.nextLine();
+                char choice = choice.toUpperCase().charAt(0);
+                if (chocie == 'Y') {
+                    
+                }
+                else if (choice == 'N') {
+                    menu();
+                }
+                else {
+                    System.out.println("");
+                    condition = true;
+                }
+            }while (condition);
             //after defeating Ares you will fight with the  Artemis
             if(artemis()) {
+                seprateTerminal();
+                System.out.println("You Won!");
+                do{
+                    condition = false;
+                    System.out.print("Are you ready to take battle with Hades[y] or leave to menu[n]: ");
+                    String choice = scan.nextLine();
+                    char choice = choice.toUpperCase().charAt(0);
+                    if (chocie == 'Y') {
+                        
+                    }
+                    else if (choice == 'N') {
+                        menu();
+                    }
+                    else {
+                        System.out.println("");
+                        condition = true;
+                    }
+                }while (condition);
                 //After defeating Artemis, you will fight with the Hades
                 if(hades()) {
+                    seprateTerminal();
+                    System.out.println("You Won!");
+                    do{
+                        condition = false;
+                        System.out.print("Are you ready to take battle with Apollo[y] or leave to menu[n]: ");
+                        String choice = scan.nextLine();
+                        char choice = choice.toUpperCase().charAt(0);
+                        if (chocie == 'Y') {
+                            
+                        }
+                        else if (choice == 'N') {
+                            menu();
+                        }
+                        else {
+                            System.out.println("");
+                            condition = true;
+                        }
+                    }while (condition);
                     //After defeating Hades, you will fight with the Apollo
                     if(apollo()) {
+                        seprateTerminal();
+                        System.out.println("You Won!");
+                        do{
+                            condition = false;
+                            System.out.print("Are you ready to take battle with Zeus[y] or leave to menu[n]: ");
+                            String choice = scan.nextLine();
+                            char choice = choice.toUpperCase().charAt(0);
+                            if (chocie == 'Y') {
+                                
+                            }
+                            else if (choice == 'N') {
+                                menu();
+                            }
+                            else {
+                                System.out.println("");
+                                condition = true;
+                            }
+                        }while (condition);
                         //After defeating Apollo, you will fight with Zeus
                         if(zeus()) {
-                            //basic you won message, called using the victory method
-                            //victory();
+                            seprateTerminal();
+                            victory();
                         } else {
                             //If lost then prompt to ask if want to leave to menu or play again
                             System.out.println("You lost the battle with zeus");
@@ -224,7 +289,7 @@ public class HecateQuest {
         String god = "Ares";
 
         //clearing the terminal to improve visual 
-        clearTerminal();
+        seprateTerminal();
         //basic introduction for the god and the battle
         System.out.println("Welcome to the Battle Ground!");
         System.out.println("Here, you will face a fierce fight with Ares, the God of War.");
@@ -266,7 +331,7 @@ public class HecateQuest {
         String god = "Artemis";
 
         //clearing the terminal to improve visual 
-        clearTerminal();
+        seprateTerminal();
 
         //introduction to god
         System.out.println("\nWelcome to the Jungles!");
@@ -303,7 +368,7 @@ public class HecateQuest {
         String god = "Hades";
 
         //clearing the terminal to improve visual 
-        clearTerminal();
+        seprateTerminal();
         //introduction to god
         System.out.println("\nWelcome to the Underworld!");
         System.out.println("In this dark realm, you will clash with Hades, the God of the Underworld.");
@@ -340,7 +405,7 @@ public class HecateQuest {
         String god = "Apollo";
 
         //clearing the terminal to improve visual 
-        clearTerminal();
+        seprateTerminal();
         //intro to god
         System.out.println("\nWelcome to the Sunlit Realm!");
         System.out.println("Prepare to challenge Apollo, the God of the Sun and Music.");
@@ -377,7 +442,7 @@ public class HecateQuest {
         String god = "Zeus";
 
         //clearing the terminal to improve visual 
-        clearTerminal();
+        seprateTerminal();
         //intro to god
         System.out.println("\nWelcome to Mount Olympus!");
         System.out.println("You have reached the home of the gods.");
@@ -424,7 +489,7 @@ public class HecateQuest {
         //the condition never get false as if one of them get below 0, the other one win and loop break
         while (hp[0] > 0 && hp[1] > 0) {
 
-            clearTerminal();
+            seprateTerminal();
 
             // Player's turn to attack
             //announcing the hp of player and opponent 
@@ -556,6 +621,10 @@ public class HecateQuest {
         return opponentHp;
     }
 
+    //divine judgement is the attack of zeus
+    public static void divineJudgement() {
+
+    }
    
 
 
@@ -712,15 +781,22 @@ public static int[] zeusAttack(int[] hp) {
     // Divine Judgement (70-90)
     else {
         System.out.println("Zeus poses a divine dilemma with Divine Judgement!");
-        // REMAINING TO ADD THE METHOD
-        // divineJudgement();
+        divineJudgement();
     }   
     return hp;
 }
 
 //method for clearing the terminal 
-    public static void clearTerminal() {
+    public static void seprateTerminal() {
     System.out.println("--------------------------------------------------------------------------");
 }
+
+//victory method called when you defeat zeus
+    public static void victory() {
+        System.out.println("Congratulations, Hecate! You have defeated Zeus, the King of the Gods!");
+        System.out.println("The Earth is safe once again.");
+        System.out.println("You are a true hero and protector of humanity.");
+        System.out.println("Thank you for playing, and may the magic of Hecate guide you on your next adventure!");
+    }
 
 }

@@ -127,10 +127,10 @@ public class HecateQuest {
                             do {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             String choice = scan.nextLine();
-                            if (choice.charAt[0] == '1') {
+                            if (choice.charAt(0) == '1') {
                                 playGame();
                             }
-                            else if (choice.charAt[0] == '0') {
+                            else if (choice.charAt(0) == '0') {
                                 menu();
                             }
                             else {
@@ -144,10 +144,10 @@ public class HecateQuest {
                             do {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             String choice = scan.nextLine();
-                            if (choice.charAt[0] == '1') {
+                            if (choice.charAt(0) == '1') {
                                 playGame();
                             }
-                            else if (choice.charAt[0] == '0') {
+                            else if (choice.charAt(0) == '0') {
                                 menu();
                             }
                             else {
@@ -161,10 +161,10 @@ public class HecateQuest {
                     do {
                     System.out.print("Would you like to exit[0] or play again[1]: ");
                     String choice = scan.nextLine();
-                    if (choice.charAt[0] == '1') {
+                    if (choice.charAt(0) == '1') {
                         playGame();
                     }
-                    else if (choice.charAt[0] == '0') {
+                    else if (choice.charAt(0) == '0') {
                         menu();
                     }
                     else {
@@ -178,10 +178,10 @@ public class HecateQuest {
                 do {
                 System.out.print("Would you like to exit[0] or play again[1]: ");
                 String choice = scan.nextLine();
-                if (choice.charAt[0] == '1') {
+                if (choice.charAt(0) == '1') {
                     playGame();
                 }
-                else if (choice.charAt[0] == '0') {
+                else if (choice.charAt(0) == '0') {
                     menu();
                 }
                 else {
@@ -195,10 +195,10 @@ public class HecateQuest {
             do {
             System.out.print("Would you like to exit[0] or play again[1]: ");
             String choice = scan.nextLine();
-            if (choice.charAt[0] == '1') {
+            if (choice.charAt(0) == '1') {
                 playGame();
             }
-            else if (choice.charAt[0] == '0') {
+            else if (choice.charAt(0) == '0') {
                 menu();
             }
             else {

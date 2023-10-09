@@ -126,7 +126,7 @@ public class HecateQuest {
                             System.out.println("You lost the battle with zeus");
                             do {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
-                            int choice = scan.nextLine();
+                            String choice = scan.nextLine();
                             if (choice.charAt[0] == '1') {
                                 playGame();
                             }
@@ -143,7 +143,7 @@ public class HecateQuest {
                          System.out.println("You lost the battle with Apollo");
                             do {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
-                            int choice = scan.nextLine();
+                            String choice = scan.nextLine();
                             if (choice.charAt[0] == '1') {
                                 playGame();
                             }
@@ -160,7 +160,7 @@ public class HecateQuest {
                     System.out.println("You lost the battle with Hades");
                     do {
                     System.out.print("Would you like to exit[0] or play again[1]: ");
-                    int choice = scan.nextLine();
+                    String choice = scan.nextLine();
                     if (choice.charAt[0] == '1') {
                         playGame();
                     }
@@ -177,7 +177,7 @@ public class HecateQuest {
                 System.out.println("You lost the battle with Artemis");
                 do {
                 System.out.print("Would you like to exit[0] or play again[1]: ");
-                int choice = scan.nextLine();
+                String choice = scan.nextLine();
                 if (choice.charAt[0] == '1') {
                     playGame();
                 }
@@ -194,7 +194,7 @@ public class HecateQuest {
             System.out.println("You lost the battle with Ares");
             do {
             System.out.print("Would you like to exit[0] or play again[1]: ");
-            int choice = scan.nextLine();
+            String choice = scan.nextLine();
             if (choice.charAt[0] == '1') {
                 playGame();
             }

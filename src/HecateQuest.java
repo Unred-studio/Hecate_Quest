@@ -887,6 +887,12 @@ public static int[] zeusAttack(int[] hp) {
     // Divine Judgement (70-90)
     else {
         hp = divineJudgement(hp);
+    if (hp[1] == 0) {
+        System.out.println("Zeus has lost!");
+    } else {
+        System.out.println("You are wrong!");
+        hp[0] = 0;
+    }
     }   
     return hp;
 }

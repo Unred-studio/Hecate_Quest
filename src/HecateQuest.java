@@ -127,6 +127,8 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
+                                // Consume the newline character left in the input buffer
+                                scan.nextLine();
                                 playGame();
                             }
                             else  {
@@ -139,6 +141,8 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
+                                 // Consume the newline character left in the input buffer
+                                 scan.nextLine();
                                 playGame();
                             }
                             else  {
@@ -151,6 +155,8 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
+                                // Consume the newline character left in the input buffer
+                                scan.nextLine();
                                 playGame();
                             }
                             else  {
@@ -163,6 +169,8 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
+                                // Consume the newline character left in the input buffer
+                                scan.nextLine();
                                 playGame();
                             }
                             else  {
@@ -175,6 +183,8 @@ public class HecateQuest {
                             System.out.print("Would you like to exit[0] or play again[1]: ");
                             int choice = scan.nextInt();
                             if (choice == 1) {
+                                // Consume the newline character left in the input buffer
+                                scan.nextLine();
                                 playGame();
                             }
                             else  {

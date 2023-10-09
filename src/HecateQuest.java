@@ -666,11 +666,15 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[0] = heavyAttack(hp[0]); 
+                hp[0] = heavyAttack(hp[0]);
+                hp[0] = heavyAttack(hp[0]);
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[1] = heavyAttack(hp[1]); 
+                hp[1] = heavyAttack(hp[1]);
+                hp[1] = heavyAttack(hp[1]);
             }
         }
         else if (randomQues == 1) {
@@ -681,11 +685,15 @@ public class HecateQuest {
 
             if (answer == 'A') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[0] = heavyAttack(hp[0]); 
+                hp[0] = heavyAttack(hp[0]);
+                hp[0] = heavyAttack(hp[0]);
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[1] = heavyAttack(hp[1]); 
+                hp[1] = heavyAttack(hp[1]);
+                hp[1] = heavyAttack(hp[1]);
             }
         }
         else if (randomQues == 2) {
@@ -696,11 +704,15 @@ public class HecateQuest {
 
             if (answer == 'B' || answer == 'C') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[0] = heavyAttack(hp[0]); 
+                hp[0] = heavyAttack(hp[0]);
+                hp[0] = heavyAttack(hp[0]); 
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[1] = heavyAttack(hp[1]); 
+                hp[1] = heavyAttack(hp[1]);
+                hp[1] = heavyAttack(hp[1]);
             }
         }
         else if (randomQues == 3) {
@@ -711,11 +723,15 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[0] = heavyAttack(hp[0]); 
+                hp[0] = heavyAttack(hp[0]);
+                hp[0] = heavyAttack(hp[0]);
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[1] = heavyAttack(hp[1]); 
+                hp[1] = heavyAttack(hp[1]);
+                hp[1] = heavyAttack(hp[1]);
             }
         }
         else {
@@ -726,11 +742,15 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]); //hp[1] is the hp of zeus, if 0 that means he lost and you won 
+                hp[0] = heavyAttack(hp[0]); 
+                hp[0] = heavyAttack(hp[0]);
+                hp[0] = heavyAttack(hp[0]);
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]); //hp[0] is your hp, if you gave wrong answer than you lost
+                hp[1] = heavyAttack(hp[1]); 
+                hp[1] = heavyAttack(hp[1]);
+                hp[1] = heavyAttack(hp[1]);
             }
         }
 
@@ -743,7 +763,7 @@ public class HecateQuest {
     //attack of each god starts from here, everything thing is same for each god execpt for the attack type
 
  // Ares
-public static int[] aresAttack(int[] hp) {
+    public static int[] aresAttack(int[] hp) {
 
     int probability = rand.nextInt(100);
 
@@ -883,8 +903,7 @@ public static int[] zeusAttack(int[] hp) {
     }
     // Zeus's Bestiary (50-70)
     else if (probability < 70 && probability > 50) {
-        System.out.println("Zeus summons a mythical creature, dealing 10 damage!");
-        // STILL REMAINING TO ADD PROBABILITY OF DIFFERENT ANIMAL AND THEIR ATTACK
+        System.out.println("Zeus summons army mythical creature, dealing 10 damage thrice!");
         for (int x = 0; x < 3; x++) {
             hp[0] = lowAttack(hp[0]);
         }
@@ -892,12 +911,6 @@ public static int[] zeusAttack(int[] hp) {
     // Divine Judgement (70-90)
     else {
         hp = divineJudgement(hp);
-    if (hp[1] == 0) {
-        System.out.println("Zeus has lost!");
-    } else {
-        System.out.println("You are wrong!");
-        hp[0] = 0;
-    }
     }   
     return hp;
 }

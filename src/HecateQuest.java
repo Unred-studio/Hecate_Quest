@@ -110,7 +110,7 @@ public class HecateQuest {
         //after the story(or directly from menu) the player comes to playGame method
         //the if statements is used such that the player can only go to next level if he has defeated the god of current level
         //game start with Ares
-        if(true) {    //ares()
+        if(ares()) {    //ares()
             seprateTerminal();
             System.out.println("You Won!");
             do{
@@ -130,7 +130,7 @@ public class HecateQuest {
                 }
             }while (condition);
             //after defeating Ares you will fight with the  Artemis
-            if(true) { //artemis()
+            if(artemis()) { //artemis()
                 seprateTerminal();
                 System.out.println("You Won!");
                 do{
@@ -150,7 +150,7 @@ public class HecateQuest {
                     }
                 }while (condition);
                 //After defeating Artemis, you will fight with the Hades
-                if(true) { //hades()
+                if(hades()) { //hades()
                     seprateTerminal();
                     System.out.println("You Won!");
                     do{
@@ -170,7 +170,7 @@ public class HecateQuest {
                         }
                     }while (condition);
                     //After defeating Hades, you will fight with the Apollo
-                    if(true) { //apollo()
+                    if(apollo()) { //apollo()
                         seprateTerminal();
                         System.out.println("You Won!");
                         do{
@@ -194,7 +194,6 @@ public class HecateQuest {
                             seprateTerminal();
                             victory();
                         } else {
-                            System.out.println("Step 5");
                             //If lost then prompt to ask if want to leave to menu or play again
                             System.out.println("You lost the battle with zeus");
                             do {
@@ -468,10 +467,8 @@ public class HecateQuest {
         } while(condition);
 
         if(fight(god)) {
-            System.out.println("Step 4: positive");
             return true;
         } else {
-            System.out.println("Step 4");
             return false;
         }
     }
@@ -503,7 +500,6 @@ public class HecateQuest {
     
             // Check if the opponent's HP has reached 0 or less
             if (hp[1] <= 0) {
-                System.out.println("Step 3: positive");
                 winner = true;
                 break;
             }
@@ -513,7 +509,6 @@ public class HecateQuest {
     
             // Check if the player's HP has reached 0 or less
             if (hp[0] <= 0) {
-                System.out.println("Step 3");
                 winner = false;
                 break;
             }
@@ -602,7 +597,6 @@ public class HecateQuest {
         } else if (god.equals("Apollo")) {
             hp = apolloAttack(hp);
         } else {
-            System.out.println("Step 2");
             hp = zeusAttack(hp);
         }
         }
@@ -897,17 +891,17 @@ public static int[] zeusAttack(int[] hp) {
     int probability = rand.nextInt(100);
 
     // Medium Attack (0-50)
-    if (false/*probability < 50*/) {
+    if (probability < 50) {
         System.out.println("Zeus channels his Super Strength, dealing 25 damage!");
         hp[0] = medAttack(hp[0]);
     }
     // Heavy Attack (90-99)
-    else if (false/*probability < 99 && probability > 90*/) {
+    else if (probability < 99 && probability > 90) {
         System.out.println("Zeus unleashes a devastating Lightning Strike, causing 45 damage!");
         hp[0] = heavyAttack(hp[0]);
     }
     // Zeus's Bestiary (50-70)
-    else if (false/*probability < 70 && probability > 50*/) {
+    else if (probability < 70 && probability > 50) {
         System.out.println("Zeus summons army mythical creature, dealing 10 damage thrice!");
         for (int x = 0; x < 3; x++) {
             hp[0] = lowAttack(hp[0]);
@@ -916,7 +910,6 @@ public static int[] zeusAttack(int[] hp) {
     // Divine Judgement (70-90)
     else {
         if(divineJudgement()) {
-            System.out.println("step 1");
             hp[1] = ultimateAttack(hp[1]);
         }
         else {

@@ -713,6 +713,10 @@ public class HecateQuest {
             }
             else {
                 System.out.println("You are wrong!");
+                System.out.println("Zeus, the King of the Gods, calls upon the heavens and channels unimaginable power!");
+                System.out.println("A blinding bolt of lightning erupts from the sky, striking you with divine fury.");
+                System.out.println("Your strength fades as the overwhelming force of Zeus's Lightning Strike consumes you.");
+                System.out.println("Hecate has fallen in battle. Olympus prevails, and the Earth is plunged into chaos.");
                 result = false;
             }
         }
@@ -728,6 +732,10 @@ public class HecateQuest {
             }
             else {
                 System.out.println("You are wrong!");
+                System.out.println("Zeus, the King of the Gods, calls upon the heavens and channels unimaginable power!");
+                System.out.println("A blinding bolt of lightning erupts from the sky, striking you with divine fury.");
+                System.out.println("Your strength fades as the overwhelming force of Zeus's Lightning Strike consumes you.");
+                System.out.println("Hecate has fallen in battle. Olympus prevails, and the Earth is plunged into chaos.");
                 result = false;
             }
         }
@@ -743,6 +751,10 @@ public class HecateQuest {
             }
             else {
                 System.out.println("You are wrong!");
+                System.out.println("Zeus, the King of the Gods, calls upon the heavens and channels unimaginable power!");
+                System.out.println("A blinding bolt of lightning erupts from the sky, striking you with divine fury.");
+                System.out.println("Your strength fades as the overwhelming force of Zeus's Lightning Strike consumes you.");
+                System.out.println("Hecate has fallen in battle. Olympus prevails, and the Earth is plunged into chaos.");
                 result = false;
             }
         }
@@ -758,6 +770,10 @@ public class HecateQuest {
             }
             else {
                 System.out.println("You are wrong!");
+                System.out.println("Zeus, the King of the Gods, calls upon the heavens and channels unimaginable power!");
+                System.out.println("A blinding bolt of lightning erupts from the sky, striking you with divine fury.");
+                System.out.println("Your strength fades as the overwhelming force of Zeus's Lightning Strike consumes you.");
+                System.out.println("Hecate has fallen in battle. Olympus prevails, and the Earth is plunged into chaos.");
                 result = false;
 
             }

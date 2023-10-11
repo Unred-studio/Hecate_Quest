@@ -540,16 +540,22 @@ public class HecateQuest {
             String attack = scan.nextLine();
 
             if(attack.charAt(0) == 'f') {
+                Sytem.out.println("")
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'w') {
+                Sytem.out.println("")
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'e') {
+                Sytem.out.println("")
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'a') {
+                Sytem.out.println("")
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'i') {
+                Sytem.out.println("")
                 stunner = true;
             } else if(attack.charAt(0) == 'n') {
+                Sytem.out.println("")
                 hp[1] = heavyAttack(hp[1]);
             } else if(attack.charAt(0) == 'h') {
                 System.out.println("Hecate restored its Hp to 100");

@@ -540,23 +540,23 @@ public class HecateQuest {
             String attack = scan.nextLine();
 
             if(attack.charAt(0) == 'f') {
-                Sytem.out.println("")
+                System.out.println("You summon the power of fire and unleash a scorching fireball damaging 10 hp!");                
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'w') {
-                Sytem.out.println("")
+                System.out.println("You harness the waters and create a powerful tidal wave damaging 10 hp!");                
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'e') {
-                Sytem.out.println("")
+                System.out.println("You command the earth to hurl massive rocks at your opponent damaging 10 hp!");                
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'a') {
-                Sytem.out.println("")
+                System.out.println("You control the air, creating a devastating whirlwind damaging 10 hp!");                
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'i') {
-                Sytem.out.println("")
+                System.out.println("You create a mesmerizing illusion to confuse your opponent!");                
                 stunner = true;
             } else if(attack.charAt(0) == 'n') {
-                Sytem.out.println("")
-                hp[1] = heavyAttack(hp[1]);
+                System.out.println("You delve into the realm of necromancy, summoning powerful spirits damaging 30 hp !");                
+                hp[1] = necroAttack(hp[1]);
             } else if(attack.charAt(0) == 'h') {
                 System.out.println("Hecate restored its Hp to 100");
                 hp[0] = heal(hp[0]);
@@ -612,6 +612,11 @@ public class HecateQuest {
     //heavy attack, decrease the provided hp by 45
     public static int heavyAttack(int opponentHp) {
         opponentHp-= 45;
+        return opponentHp;
+    }
+
+    public static int necroAttack(int opponentHp) {
+        opponentHp-= 30;
         return opponentHp;
     }
 

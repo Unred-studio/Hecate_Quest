@@ -558,8 +558,14 @@ public class HecateQuest {
                 System.out.println("You delve into the realm of necromancy, summoning powerful spirits damaging 30 hp !");                
                 hp[1] = necroAttack(hp[1]);
             } else if(attack.charAt(0) == 'h') {
+                if(hp[0] <= 10) {
                 System.out.println("Hecate restored its Hp to 100");
                 hp[0] = heal(hp[0]);
+                }
+                else {
+                    System.out.println("You can't heal if you hp is above 10.");
+                    condtion = true;
+                }
             } else {
                 System.out.println("Please enter the valid char");
                 condition = true;
@@ -616,7 +622,7 @@ public class HecateQuest {
     }
 
     public static int necroAttack(int opponentHp) {
-        opponentHp-= 100;
+        opponentHp-= 30;
         return opponentHp;
     }
 
@@ -638,12 +644,13 @@ public class HecateQuest {
     }
 
     //divine judgement is the attack of zeus
-    public static int[] divineJudgement(int[] hp) {
+    public static boolean divineJudgement() {
         //introduction to the divine judgement 
         System.out.println("Zeus poses a divine dilemma:");
         System.out.println("You stand at a crossroads, and you must choose your path wisely.");
         System.out.println("Answer correctly to continue your journey, or Zeus shall prevail!");
 
+        boolean result;
         //all the questions
         String question1 = "Question 1: You have the power to save one of the following artifacts from destruction. Which one shall you save?\n" +
                   "A) A legendary sword that can defeat any enemy.\n" +
@@ -677,11 +684,11 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]);
+                result = true;
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]);
+                result = false;
             }
         }
         else if (randomQues == 1) {
@@ -692,11 +699,11 @@ public class HecateQuest {
 
             if (answer == 'A') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]);
+                result = true;
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]);
+                result = false;
             }
         }
         else if (randomQues == 2) {
@@ -707,11 +714,11 @@ public class HecateQuest {
 
             if (answer == 'B' || answer == 'C') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]);
+                result = true;
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]);
+                result = false;
             }
         }
         else if (randomQues == 3) {
@@ -722,11 +729,11 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]);
+                result = true;
             }
             else {
                 System.out.println("You are wrong!");
-                hp[0] = ultimateAttack(hp[0]);
+                result = false;
             }
         }
         else {
@@ -737,17 +744,16 @@ public class HecateQuest {
 
             if (answer == 'B') {
                 System.out.println("You were correct!");
-                hp[1] = ultimateAttack(hp[1]);
+                result = true;
             }
             else {
                 System.out.println("You are wrong!");
-                hp[1] = heavyAttack(hp[1]); 
-                hp[1] = heavyAttack(hp[1]);
-                hp[1] = heavyAttack(hp[1]);
+                result = false;
+
             }
         }
 
-        return hp;
+        return result;
     }
    
 

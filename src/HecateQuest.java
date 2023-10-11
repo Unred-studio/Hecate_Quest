@@ -564,7 +564,7 @@ public class HecateQuest {
                 }
                 else {
                     System.out.println("You can't heal if you hp is above 10.");
-                    condtion = true;
+                    condition = true;
                 }
             } else {
                 System.out.println("Please enter the valid char");

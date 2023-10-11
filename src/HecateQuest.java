@@ -110,7 +110,7 @@ public class HecateQuest {
         //after the story(or directly from menu) the player comes to playGame method
         //the if statements is used such that the player can only go to next level if he has defeated the god of current level
         //game start with Ares
-        if(ares()) {
+        if(true) {    //ares()
             seprateTerminal();
             System.out.println("You Won!");
             do{
@@ -130,7 +130,7 @@ public class HecateQuest {
                 }
             }while (condition);
             //after defeating Ares you will fight with the  Artemis
-            if(artemis()) {
+            if(true) { //artemis()
                 seprateTerminal();
                 System.out.println("You Won!");
                 do{
@@ -150,7 +150,7 @@ public class HecateQuest {
                     }
                 }while (condition);
                 //After defeating Artemis, you will fight with the Hades
-                if(hades()) {
+                if(true) { //hades()
                     seprateTerminal();
                     System.out.println("You Won!");
                     do{
@@ -170,7 +170,7 @@ public class HecateQuest {
                         }
                     }while (condition);
                     //After defeating Hades, you will fight with the Apollo
-                    if(apollo()) {
+                    if(true) { //apollo()
                         seprateTerminal();
                         System.out.println("You Won!");
                         do{

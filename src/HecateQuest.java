@@ -909,7 +909,14 @@ public static int[] zeusAttack(int[] hp) {
     }
     // Divine Judgement (70-90)
     else {
-        hp = divineJudgement(hp);
+        if(divineJudgement()) {
+            hp[1] = 0;
+            hp[0] = 100;
+        }
+        else {
+            hp[0] = 0;
+            hp[1] = 100;
+        }
     }   
     return hp;
 }

@@ -194,6 +194,7 @@ public class HecateQuest {
                             seprateTerminal();
                             victory();
                         } else {
+                            seprateTerminal();
                             //If lost then prompt to ask if want to leave to menu or play again
                             System.out.println("You lost the battle with zeus");
                             do {

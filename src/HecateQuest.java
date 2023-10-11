@@ -73,7 +73,7 @@ public class HecateQuest {
         System.out.println("All the gods who smelled it became uncontrollable and started to wreak havoc on Earth.");
         System.out.println("It is now your responsibility to protect the Earth by stopping these rogue gods.");
         System.out.println("Your powers are:");
-        System.out.println("- Healing (Heal your HP to 100, only if it's below 10)");
+        System.out.println("- Healing (Heal your HP to 100, only works if your hp is below 10)");
         System.out.println("- Elemental Manipulation (Fire, Water, Air, Earth)");
         System.out.println("- Necromancy (Summon the spirits from underworld)");
         System.out.println("- Illusion (prevents opponents from attacking by creating a illusion)");
@@ -557,7 +557,8 @@ public class HecateQuest {
                 System.out.println("You control the air, creating a devastating whirlwind damaging 10 hp!");                
                 hp[1] = lowAttack(hp[1]);
             } else if(attack.charAt(0) == 'i') {
-                System.out.println("You create a mesmerizing illusion to confuse your opponent!");                
+                System.out.println("You create a mesmerizing illusion to confuse your opponent!");  
+                System.out.println("Your opponent isn't able to attack!");              
                 stunner = true;
             } else if(attack.charAt(0) == 'n') {
                 System.out.println("You delve into the realm of necromancy, summoning powerful spirits damaging 30 hp !");                
@@ -651,9 +652,9 @@ public class HecateQuest {
     //divine judgement is the attack of zeus
     public static boolean divineJudgement() {
         //introduction to the divine judgement 
-        System.out.println("Zeus poses a divine dilemma:");
-        System.out.println("You stand at a crossroads, and you must choose your path wisely.");
-        System.out.println("Answer correctly to continue your journey, or Zeus shall prevail!");
+        System.out.println("Zeus is the wisest! He gives you a question.");
+        System.out.println("Answer correctly and zeus retreat back!");
+        System.out.println("or Zeus shall prevail!");
 
         boolean result;
         //all the questions
@@ -693,6 +694,10 @@ public class HecateQuest {
             }
             else {
                 System.out.println("You are wrong!");
+                System.out.println("Zeus, the King of the Gods, calls upon the heavens and channels unimaginable power!");
+                System.out.println("A blinding bolt of lightning erupts from the sky, striking you with divine fury.");
+                System.out.println("Your strength fades as the overwhelming force of Zeus's Lightning Strike consumes you.");
+                System.out.println("Hecate has fallen in battle. Olympus prevails, and the Earth is plunged into chaos.");
                 result = false;
             }
         }

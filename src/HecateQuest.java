@@ -212,6 +212,7 @@ public class HecateQuest {
                         } while(condition);
                         }
                     } else {
+                        seprateTerminal();
                         //If lost then prompt to ask if want to leave to menu or play again
                          System.out.println("You lost the battle with Apollo");
                             do {
@@ -229,6 +230,7 @@ public class HecateQuest {
                         } while(condition);
                     }
                 } else {
+                    seprateTerminal();
                     //If lost then prompt to ask if want to leave to menu or play again
                     System.out.println("You lost the battle with Hades");
                     do {
@@ -246,6 +248,7 @@ public class HecateQuest {
                 } while(condition);
                 }
             } else {
+                seprateTerminal();
                 //If lost then prompt to ask if want to leave to menu or play again
                 System.out.println("You lost the battle with Artemis");
                 do {
@@ -263,6 +266,7 @@ public class HecateQuest {
             } while(condition);
             }
         } else {
+            seprateTerminal();
             //If lost then prompt to ask if want to leave to menu or play again
             System.out.println("You lost the battle with Ares");
             do {

@@ -616,7 +616,7 @@ public class HecateQuest {
     }
 
     public static int necroAttack(int opponentHp) {
-        opponentHp-= 30;
+        opponentHp-= 100;
         return opponentHp;
     }
 

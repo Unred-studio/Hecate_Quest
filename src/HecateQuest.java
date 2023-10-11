@@ -2,7 +2,7 @@
 /*
  @name: Aaditya K
  @date: Oct 3, 2023
- @version: 0.1.0
+ @version: 18.6.8
  @detail: Creating a fantasy RPG game
  */
 import java.util.Scanner;

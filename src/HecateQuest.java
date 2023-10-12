@@ -70,14 +70,14 @@ public class HecateQuest {
         System.out.println("You are the Goddess of Magic, Hecate.");
         System.out.println("One day, you made a mistake while brewing a potion from a poisonous plant.");
         System.out.println("Unfortunately, this potion spread throughout Olympus.");
-        System.out.println("All the gods who smelled it became uncontrollable and started to wreak havoc on Earth.");
-        System.out.println("It is now your responsibility to protect the Earth by stopping these rogue gods.");
+        System.out.println("All the Gods who smelled it became uncontrollable and started to wreak havoc on Earth.");
+        System.out.println("It is now your responsibility to protect the Earth by stopping these rogue Gods.");
         System.out.println("Your powers are:");
         System.out.println("- Healing (Heal your HP to 100, only works if your hp is below 10)");
         System.out.println("- Elemental Manipulation (Fire, Water, Air, Earth)");
         System.out.println("- Necromancy (Summon the spirits from underworld)");
         System.out.println("- Illusion (prevents opponents from attacking by creating a illusion)");
-        System.out.println("Your main mission is to take on the rogue gods, defeat them using your powers.");
+        System.out.println("Your main mission is to take on the rogue Gods, defeat them using your powers.");
         System.out.println("Good luck, Hecate! The fate of Earth lies in your hands.");
         System.out.println("");
 
@@ -534,7 +534,7 @@ public class HecateQuest {
         System.out.println("");
         System.out.println("Please choice your attack: ");
         System.out.println("Elemental Manupulation [Fire(f), Water(w), Earth(e), Air(a)]");
-        System.out.println("Illution[i]");
+        System.out.println("Illusion[i]");
         System.out.println("Necromancy[n]");
         System.out.println("Healing[h]");
         //ask for which attack to choice 

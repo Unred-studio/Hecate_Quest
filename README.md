@@ -1,18 +1,21 @@
-## Getting Started
+# Hecate's Quest
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Welcome to Hecate's Quest, a terminal-based RPG game coded in Java.
 
-## Folder Structure
+## How to Play
 
-The workspace contains two folders by default, where:
+1. **Prerequisites:**
+   - Ensure that you have Java installed on your system.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+2. **Download the Game:**
+   - Clone or download this repository to your local machine.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+3. **Compile the Game:**
+   - Open your terminal and navigate to the project directory.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+4. **Run the Game:**
+- Start the game by running the following command:
+- `java src/HecateQuest.java`
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+5. **Enjoy the Adventure:**
+- Follow the on-screen instructions to play and enjoy the RPG adventure!
